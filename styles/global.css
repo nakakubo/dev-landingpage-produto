@@ -19,16 +19,24 @@
 	--stroke-color: #27272A;
 	--text-color-secondary: #A1A1AA;
 	--text-color-primary: #F4F4F5;
+	--brand-color-primary: #F7B733;
+	--brand-color-secondary: #FC4A1A;
 	
 	--ff-sans: "Inter", system-ui, sans-serif;
 	--fw-base: 400;
 	--fw-md: 500;
 	--fw-bold: 800;
+	
 	--fs-sm: .875rem;
 	--fs-base: 1rem;
 	--fs-lg: 1.25rem;
 	--fs-xl: 1.5rem;
 	--fs-2xl: 2.5rem;
+	
+	--px-lg: 1.5rem;
+	--py-base: 1rem;
+	--py-lg: 2rem;
+	--py-xl: 3rem;
 }
 
 /* Initial Styles */
@@ -39,6 +47,7 @@ html {
 	font-size: var(--fs-base);
 	line-height: 1.6;
 	color: var(--text-color-primary);
+	scroll-behavior: smooth;
 }
 
 body {
@@ -69,8 +78,20 @@ a {
 	color: inherit;
 }
 
+a:hover {
+	background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
 ul[role="list"] {
 	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	display: inline-block;
 }
 
 @media (width >= 80em) {
@@ -78,5 +99,10 @@ ul[role="list"] {
 		--fs-lg: 2rem;
 		--fs-xl: 3rem;
 		--fs-2xl: 4rem;
+		
+		--px-lg: 2rem;
+		--py-base: 1.5rem;
+		--py-lg: 2.5rem;
+		--py-xl: 5rem;
 	}
 }
